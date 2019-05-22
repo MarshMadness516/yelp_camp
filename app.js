@@ -17,7 +17,11 @@ var commentRoutes       = require('./routes/comments'),
 
     
 
-mongoose.connect('mongodb+srv://marshmadness:marzy%40596@cluster0-wi8yf.mongodb.net/yelp_camp?retryWrites=true', { useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost/yelp_camp', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://mpritchett:marzy596@cluster0-swuvm.mongodb.net/test?retryWrites=true', {
+    useNewUrlParser: true,
+    useCreateIndex: true
+});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 // __dirname refers to the entire directory path
