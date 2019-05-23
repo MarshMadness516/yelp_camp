@@ -22,8 +22,9 @@ var commentRoutes       = require('./routes/comments'),
 //     useNewUrlParser: true,
 //     useCreateIndex: true
 // });
+let url = process.env.DATABASEURL || 'mongodb://localhost/yelp_camp';
 
-mongoose.connect(process.env.DATABASEURL, {
+mongoose.connect(url, {
     useNewUrlParser: true,
     useCreateIndex: true
 });
