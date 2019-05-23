@@ -18,10 +18,16 @@ var commentRoutes       = require('./routes/comments'),
     
 
 // mongoose.connect('mongodb://localhost/yelp_camp', { useNewUrlParser: true });
-mongoose.connect('mongodb+srv://mpritchett:marzy596@cluster0-swuvm.mongodb.net/test?retryWrites=true', {
+// mongoose.connect('mongodb+srv://mpritchett:marzy596@cluster0-swuvm.mongodb.net/test?retryWrites=true', {
+//     useNewUrlParser: true,
+//     useCreateIndex: true
+// });
+
+mongoose.connect(process.env.DATABASEURL, {
     useNewUrlParser: true,
     useCreateIndex: true
 });
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 // __dirname refers to the entire directory path
