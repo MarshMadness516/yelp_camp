@@ -67,5 +67,5 @@ app.use("/campgrounds", campgroundRoutes);
 
 
 app.listen(process.env.PORT, process.env.IP, () => {
-    console.log("YELPCAMP SERVER HAS STARTED")
+    console.log("YELPCAMP SERVER HAS STARTED");
 });
